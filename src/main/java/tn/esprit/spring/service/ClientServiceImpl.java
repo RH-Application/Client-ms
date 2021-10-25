@@ -19,7 +19,7 @@ public class ClientServiceImpl implements ClientService {
 	public List<Client> retrieveAllUsers() {
 		List<Client> clients=(List<Client>) clientRepository.findAll();
 		for(Client client: clients){
-			l.info("user list : "+ client);
+			l.info("client list : "+ client);
 		}
 		return clients;
 	}
