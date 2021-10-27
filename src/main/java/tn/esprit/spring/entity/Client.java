@@ -31,6 +31,7 @@ public class Client implements Serializable {
 	private String sexe_user;
 	public String designation;
 	public String webSite;
+	public String Company;
 
 	@Temporal (TemporalType.DATE)
 	   private Date JoinDate;
@@ -40,6 +41,12 @@ public String getFirstName() {
 }
 public void setFirstName(String firstName) {
 	this.firstName = firstName;
+}
+public String getCompany() {
+	return Company;
+}
+public void setCompany(String company) {
+	Company = company;
 }
 public String getLastName() {
 	return lastName;
@@ -81,7 +88,7 @@ public void setSexe_user(String sexe_user) {
 
 
 public Client(long id_user, String firstName, String lastName, String mail_user, long tel_user, String adresse_user,
-		String sexe_user, String designation, String webSite, Date joinDate) {
+		String sexe_user, String designation, String webSite, Date joinDate , String Company) {
 	super();
 	this.id_user = id_user;
 	this.firstName = firstName;
@@ -92,13 +99,14 @@ public Client(long id_user, String firstName, String lastName, String mail_user,
 	this.sexe_user = sexe_user;
 	this.designation = designation;
 	this.webSite = webSite;
-	JoinDate = joinDate;
+	this.JoinDate = joinDate;
+	this.Company = Company;
 }
 @Override
 public String toString() {
 	return "Client [id_user=" + id_user + ", firstName=" + firstName + ", lastName=" + lastName + ", mail_user="
 			+ mail_user + ", tel_user=" + tel_user + ", adresse_user=" + adresse_user + ", sexe_user=" + sexe_user
-			+ ", designation=" + designation + ", webSite=" + webSite + ", JoinDate=" + JoinDate + "]";
+			+ ", designation=" + designation + ", webSite=" + webSite + ", JoinDate=" + JoinDate + ", Company="+ Company+"]";
 }
 public String getDesignation() {
 	return designation;
